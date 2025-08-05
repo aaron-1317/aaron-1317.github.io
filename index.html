@@ -11,46 +11,166 @@
       font-family: 'Segoe UI', sans-serif;
       background: #0f0f0f;
       color: #f8f8f8;
-      text-align: center;
+      line-height: 1.7;
     }
+
     header {
-      padding: 40px 20px 20px;
+      text-align: center;
+      padding: 40px 20px 10px;
     }
+
     header h1 {
-      font-size: 2.5em;
-      letter-spacing: 2px;
+      font-size: 2.7em;
       margin-bottom: 10px;
+      letter-spacing: 2px;
     }
-    img.logo {
-      max-width: 280px;
+
+    .logo {
+      max-width: 200px;
       margin-top: 10px;
+      filter: drop-shadow(0 0 6px #fff2);
     }
+
+    nav {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    nav a {
+      color: #aaa;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
     section {
-      padding: 20px;
       max-width: 800px;
       margin: auto;
+      padding: 30px 20px;
     }
+
+    h2 {
+      font-size: 1.8em;
+      border-bottom: 1px solid #333;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .poem, .song, .quote {
+      background: #1a1a1a;
+      padding: 15px 20px;
+      margin-bottom: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00000066;
+      white-space: pre-wrap;
+    }
+
     footer {
+      text-align: center;
       padding: 20px;
       font-size: 0.9em;
       color: #888;
+    }
+
+    @media screen and (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+      .logo {
+        max-width: 140px;
+      }
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Ash-sworn Seraph</h1>
-    <img class="logo" src="sigil.png" alt="Sigil: Angel Who Soars Through Ashes">
+    <img class="logo" src="sigil.png" alt="Sigil: Ash-sworn Seraph">
   </header>
 
-  <section>
-    <h2>Welcome to My World</h2>
-    <p>Writer. Fighter. Lover. Lost, but not forgotten.</p>
-    <p>This site holds my identity — songs, logos, scars, and soul.</p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#writings">Writings</a>
+    <a href="#songs">Songs</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="quote">
+      I’m Aaron — a writer, a rider, a broken soul with a burning pen.<br>
+      I game on consoles and ride through cold winds to feel alive.<br><br>
+      My people never saw me — not the way I deserved.<br>
+      They turned their backs, and I chose silence over revenge.<br><br>
+      Like Eren Yeager, I don’t believe in begging to be understood.<br>
+      I believe in burning the past if that’s what it takes to move forward.<br><br>
+      I love the movie "I Want to Eat Your Pancreas" —<br>
+      because it reminds me of a love that touched eternity and left too soon.
+    </div>
+  </section>
+
+  <section id="writings">
+    <h2>Writings & Poetry</h2>
+    
+    <div class="poem">
+      <strong>🎙️ Main Aaj Bhi Goonjta Hoon</strong><br>
+      (Excerpt)<br><br>
+      Main vo hoon jo sabko hasaane ki koshish mein andar se rota gaya...<br>
+      Jo dikhne mein strong tha, sirf isliye kyunki kamzor dikhna logo ko uncomfortable karta tha...<br><br>
+      Uska candle koi nahi bujhata... woh apne aap bujh kar melt ho jaata hai...<br>
+      Aur main, aaj bhi, goonjta hoon...
+    </div>
+
+    <div class="poem">
+      <strong>The Scent of a Love That Chose Someone Else</strong><br><br>
+      ...I get the helmet she gave me, the soap that still smells like her,<br>
+      the moisturizer I use like I’m holding her hand again,<br>
+      and the photo of them kissing tore the last piece of me…<br>
+      I still wear her — like grief that smells like love.
+    </div>
+
+    <div class="poem">
+      <strong>Tooti Hui Mohabbat</strong><br><br>
+      Tujhse mohabbat mein khud ko mita diya,<br>
+      Har dafa toota, par tujhe hi chaha diya.<br><br>
+      Tu dard deti rahi, main seh ke muskaaya,<br>
+      Kayi baar roya, fir bhi main tujh pe fanaa ho gaya.
+    </div>
+
+  </section>
+
+  <section id="songs">
+    <h2>Written Songs</h2>
+
+    <div class="song">
+      <strong>Take Me to the Sky</strong><br>
+      (To the tune of "Fly Me to the Moon")<br><br>
+      Take me to the sky, where your eyes make me fly,<br>
+      Every moment with you, feels like I’m touching the sky...<br>
+      In other words, you’re all I need.
+    </div>
+
+    <div class="song">
+      <strong>Ride Me to the Moon</strong><br><br>
+      Ride me to the moon, let me chase the stars with you,<br>
+      Through the midnight streets, where our laughter once rang true...<br>
+      So ride me to the moon, just one last time.
+    </div>
+
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>📧 Email: <a href="mailto:glazy9168@gmail.com">glazy9168@gmail.com</a></p>
+    <p>📱 WhatsApp: <a href="https://wa.me/919041460803" target="_blank">+91 90414 60803</a></p>
   </section>
 
   <footer>
-    © 2025 Aaron · All rights reserved
+    © 2025 Aaron · Ash-sworn Seraph · All rights reserved.
   </footer>
 </body>
 </html>
