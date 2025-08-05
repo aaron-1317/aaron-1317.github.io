@@ -4,11 +4,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ash-sworn Seraph | Aaron's Domain</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
     }
     body {
       font-family: 'Roboto Mono', monospace;
@@ -26,12 +30,22 @@
       font-size: 3em;
       color: #ffffff;
       letter-spacing: 3px;
+      animation: pulse 6s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { text-shadow: 0 0 8px #ffd369; }
+      50% { text-shadow: 0 0 20px #ffd369; }
     }
     .logo {
       width: 180px;
       margin: 20px auto 10px;
       display: block;
       filter: drop-shadow(0 0 10px #888);
+      transition: transform 1s ease, filter 1s ease;
+    }
+    .logo:hover {
+      transform: scale(1.05);
+      filter: drop-shadow(0 0 25px #ffd369);
     }
     nav {
       background-color: #111;
@@ -45,9 +59,10 @@
       text-decoration: none;
       font-weight: bold;
       font-size: 1.1em;
+      transition: color 0.3s ease;
     }
     nav a:hover {
-      color: #fff;
+      color: #ffd369;
     }
     section {
       max-width: 900px;
@@ -103,7 +118,7 @@
     <a href="#writings">Writings</a>
     <a href="#songs">Songs</a>
     <a href="#contact">Contact</a>
-  </nav>  <section id="about">
+  </nav>  <section id="about" data-aos="fade-up">
     <h2>About Me</h2>
     <div class="box">
       I am <strong>Aaron</strong> — a poet, a silent storm, a writer forged in heartbreak.<br><br>
@@ -113,14 +128,17 @@
       If the world betrays you, burn the path and walk alone.<br><br>
       The movie <em>"I Want to Eat Your Pancreas"</em> lives inside my heart — it reminds me of my own love that felt eternal, but disappeared too soon.
     </div>
-  </section>  <section id="writings">
+  </section>  <section id="writings" data-aos="fade-up">
     <h2>Writings & Poetry</h2><div class="box">
-  <strong>“Main Aaj Bhi Goonjta Hoon” (Excerpt)</strong><br><br>
-  Main vo hoon jo sabko hasaane ki koshish mein andar se rota gaya...
-  Jo dikhne mein strong tha, sirf isliye kyunki kamzor dikhna logo ko uncomfortable karta tha...
-
-  Uska candle koi nahi bujhata... woh apne aap bujh kar melt ho jaata hai...
-  Aur main, aaj bhi, goonjta hoon...
+  <strong>“Main Aaj Bhi Goonjta Hoon”</strong><br><br>
+  Main vo hoon jo sabko hasaane ki koshish mein andar se rota gaya...<br>
+  Jo dikhne mein strong tha, sirf isliye kyunki kamzor dikhna logo ko uncomfortable karta tha...<br><br>
+  Main vo hoon jo sabka tha… par jab gir gaya, toh kisi ka nahi raha...<br>
+  Main… chilla nahi sakta. Kyunki meri aawaaz kisi aur ke wajood se chipak chuki hai...<br><br>
+  Uska candle koi nahi bujhata... woh apne aap bujh kar melt ho jaata hai...<br>
+  Aur main, aaj bhi, goonjta hoon...<br>
+  Na dhoondhne wala koi... na sunne wala koi...<br>
+  Bas ek awaaz jo khud ke kaan se takra kar waapas laut aati hai.
 </div>
 
 <div class="box">
@@ -133,32 +151,64 @@
 
 <div class="box">
   <strong>Tooti Hui Mohabbat</strong><br><br>
-  Tujhse mohabbat mein khud ko mita diya,
-  Har dafa toota, par tujhe hi chaha diya.
-
-  Tu dard deti rahi, main seh ke muskaaya,
-  Kayi baar roya, fir bhi main tujh pe fanaa ho gaya.
-
-  Bewakoof nahi, bas wafadar hoon mai,
+  Tujhse mohabbat mein khud ko mita diya,<br>
+  Har dafa toota, par tujhe hi chaha diya.<br><br>
+  Tu dard deti rahi, main seh ke muskaaya,<br>
+  Kayi baar roya, fir bhi main tujh pe fanaa ho gaya.<br><br>
+  Bewakoof nahi, bas wafadar hoon mai,<br>
   Tere ek pal ke liye, sadaa qurbaan hoon mai..
 </div>
 
-  </section>  <section id="songs">
+  </section>  <section id="songs" data-aos="fade-up">
     <h2>Written Songs</h2><div class="box">
   <strong>Take Me to the Sky</strong> <em>(to the tune of "Fly Me to the Moon")</em><br><br>
   Take me to the sky, where your eyes make me fly,<br>
   Every moment with you, feels like I’m touching the sky.<br>
+  In other words, you’re my fire,<br>
+  In other words, you’re my desire.<br><br>
+  Hold me close tonight, where everything feels right,<br>
+  You’re the beat in my chest, you’re the rhythm of my life.<br>
+  In other words, you make me whole,<br>
+  In other words, you’re my soul.<br><br>
+  Every second with you, I’m alive,<br>
+  With you, I know I’ll thrive.<br>
+  You’re my dream,<br>
+  You’re my reason, you’re my scream.<br><br>
+  Take me through the night, where our love burns so bright,<br>
+  Every step that we take, it’s you and I in flight.<br>
+  In other words, you make me free,<br>
   In other words, you’re all I need.
 </div>
 
 <div class="box">
   <strong>Ride Me to the Moon</strong><br><br>
   Ride me to the moon, let me chase the stars with you,<br>
-  Through the midnight streets, where our laughter once rang true...<br>
+  Through the midnight streets, where our laughter once rang true.<br>
+  Hold me like before, whisper soft and call me home,<br>
+  But the wind just sighs your name—I ride this road alone.<br><br>
+  Pixie in the dark, you lit up my every night,<br>
+  More than just a love, you were my heart, my guiding light.<br>
+  My best wife, my world, every moment felt so true,<br>
+  Now I ride through silent skies, still reaching out for you.<br><br>
+  This helmet holds your touch, your love still lingers here,<br>
+  Every turn reminds me that you should’ve been near.<br>
+  But if love can live in memories, then darling, you’re still mine,<br>
+  So ride me to the moon, just one last time.<br><br>
+  Maybe space is endless, maybe time can heal,<br>
+  But echoes of your laughter make the loneliness feel real.<br>
+  Would you wait beyond the stars? Would you call my name?<br>
+  Or am I just a rider lost inside a lover’s game?<br><br>
+  Ride me through the night, past the places we once knew,<br>
+  Let the city fade, let the sky turn shades of blue.<br>
+  If goodbye must come, let it drift like falling leaves,<br>
+  But a part of me still hopes you're waiting there for me.<br><br>
+  This helmet holds your touch, your love still lingers here,<br>
+  Every turn reminds me that you should’ve been near.<br>
+  But if love can live in memories, then darling, you’re still mine,<br>
   So ride me to the moon, just one last time.
 </div>
 
-  </section>  <section id="contact">
+  </section>  <section id="contact" data-aos="fade-up">
     <h2>Contact Me</h2>
     <div class="box">
       📧 Email: <a href="mailto:glazy9168@gmail.com">glazy9168@gmail.com</a><br>
@@ -166,6 +216,11 @@
     </div>
   </section>  <footer>
     © 2025 Aaron · Ash-sworn Seraph · All rights reserved.
-  </footer>
-</body>
+  </footer>  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  <script>
+    AOS.init({
+      duration: 1200,
+      easing: 'ease-in-out',
+      once: true
+    });
+  </script></body>
 </html>
